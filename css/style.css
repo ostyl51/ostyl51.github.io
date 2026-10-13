@@ -202,7 +202,7 @@ h3 { font: 600 22px/1.25 var(--ff-head); }
 .about-photo { position: relative; max-width: 420px; justify-self: center; width: 100%; }
 .photo-frame { padding: 8px; border-radius: 34px; background: var(--grad); box-shadow: 0 30px 80px -20px rgba(77, 124, 255, .55); transform: rotate(-2deg); transition: transform .4s; }
 .photo-frame:hover { transform: rotate(0); }
-.photo-frame img { border-radius: 27px; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 28%; }
+.photo-frame img { border-radius: 27px; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; }
 .photo-badge { position: absolute; left: -14px; bottom: 28px; padding: 10px 18px; border-radius: 14px; font-size: 14px; background: rgba(20, 18, 44, .85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--line); }
 .about-copy p { color: #cfcce9; margin-top: 18px; }
 .about-copy h2 { margin-bottom: 6px; }
