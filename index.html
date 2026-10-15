@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Orestis Stylianides, app and web developer</title>
 <meta name="description" content="Orestis Stylianides, a mobile and web developer in Nicosia, Cyprus. Apps and websites built from the first idea to launch: Flutter, Firebase, JavaScript, PHP and MySQL.">
-<meta name="theme-color" content="#f3f4f6">
+<meta name="theme-color" content="#0d1033">
 <meta property="og:title" content="Orestis Stylianides, app and web developer">
 <meta property="og:description" content="Mobile apps and websites built from the first idea to a working product.">
 <meta property="og:type" content="website">
@@ -15,7 +15,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add("js")</script>
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -41,19 +41,29 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-text">
-    <p class="status"><span class="dot" aria-hidden="true"></span>Available for new projects in Nicosia and remotely</p>
-    <h1 class="hero-title"><span>From first idea</span> <span>to a working app.</span></h1>
-    <p class="lead">I'm Orestis, a developer in Cyprus. I design and build mobile apps and websites for small businesses and founders, and I stay with the project until it's live and in people's hands.</p>
-    <div class="actions">
-      <a class="btn" href="#contact">Start a project</a>
-      <a class="btn btn-line" href="#work">See my work</a>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="status"><span class="dot" aria-hidden="true"></span>Available for new projects in Nicosia and remotely</p>
+      <h1 class="hero-title"><span>From first idea</span> <span>to a working app.</span></h1>
+      <p class="lead">I'm Orestis, a developer in Cyprus. I design and build mobile apps and websites for small businesses and founders, and I stay with the project until it's live and in people's hands.</p>
+      <div class="actions">
+        <a class="btn btn-sun" href="#contact">Start a project</a>
+        <a class="btn btn-ghost" href="#work">See my work</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hv-browser">
+        <div class="browser-bar"><i></i><i></i><i></i><span>fks-stars-motors.pages.dev</span></div>
+        <img src="assets/fks/home.webp" alt="" width="1300" height="676">
+      </div>
+      <div class="hv-phone"><img src="assets/bl/home.webp" alt="" width="600" height="1277"></div>
+      <p class="hv-tag hv-tag-a"><span class="dot"></span>Live car dealer site</p>
+      <p class="hv-tag hv-tag-b">Budget Lover, Android</p>
     </div>
   </div>
-  <figure class="hero-photo">
-    <img src="assets/orestis.webp" alt="Portrait of Orestis Stylianides" width="760" height="950">
-    <figcaption>Flutter, Firebase and the web</figcaption>
-  </figure>
+  <ul class="ticker" aria-label="Technologies I use">
+    <li>Flutter</li><li>Dart</li><li>Firebase</li><li>Firestore</li><li>JavaScript</li><li>PHP</li><li>MySQL</li><li>Cloudflare</li><li>Gemini AI</li>
+  </ul>
 </section>
 
 <!-- WORK -->
@@ -69,7 +79,7 @@
 
   <ol class="index">
     <!-- Budget Lover -->
-    <li class="item">
+    <li class="item item-bl">
       <h3>
         <button class="row" aria-expanded="true" aria-controls="p-bl" id="r-bl">
           <span class="row-name">Budget Lover</span>
@@ -108,7 +118,7 @@
     </li>
 
     <!-- FKS Stars Motors -->
-    <li class="item">
+    <li class="item item-fks">
       <h3>
         <button class="row" aria-expanded="false" aria-controls="p-fks" id="r-fks">
           <span class="row-name">FKS Stars Motors</span>
@@ -146,7 +156,7 @@
     </li>
 
     <!-- Epignwsi -->
-    <li class="item">
+    <li class="item item-ep">
       <h3>
         <button class="row" aria-expanded="false" aria-controls="p-ep" id="r-ep">
           <span class="row-name">Epignwsi</span>
@@ -228,10 +238,11 @@
 
 <!-- ABOUT -->
 <section class="section about" id="about" aria-labelledby="about-title">
-  <div class="section-head">
-    <h2 id="about-title">About me</h2>
-  </div>
+  <figure class="about-photo">
+    <img src="assets/orestis.webp" alt="Portrait of Orestis Stylianides" width="760" height="950" loading="lazy">
+  </figure>
   <div class="about-body">
+    <h2 id="about-title">About me</h2>
     <p class="about-lead">I study Computer Science and build complete products on the side: an Android budgeting app, a live website for a car dealer and a community web app.</p>
     <p>I care that what I build is secure, simple to use and easy to maintain after I hand it over. I explain things in plain language, I reply quickly, and I'm comfortable working in English and Greek.</p>
     <ul class="skills" aria-label="Skills">
