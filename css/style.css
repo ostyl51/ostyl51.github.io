@@ -90,7 +90,7 @@ h1, h2, h3 { font-family: var(--ff-head); }
 }
 .status { display: flex; align-items: center; gap: 10px; color: rgba(255, 255, 255, .78); font-size: 15px; font-weight: 600; margin-bottom: 26px; }
 .dot { display: inline-block; flex: none; width: 9px; height: 9px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(34, 178, 107, .22); }
-.hero-title { font-size: clamp(32px, 3.9vw, 54px); line-height: 1.08; font-weight: 700; letter-spacing: -.025em; }
+.hero-title { font-size: clamp(28px, 3.5vw, 48px); line-height: 1.08; font-weight: 700; letter-spacing: -.025em; }
 .hero-title span { display: block; }
 .lead { margin-top: 26px; max-width: 34em; font-size: clamp(17px, 1.35vw, 19.5px); line-height: 1.6; color: rgba(255, 255, 255, .8); }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
