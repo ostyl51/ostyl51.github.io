@@ -128,18 +128,7 @@
     });
   });
 
-  /* contact form: opens the visitor's mail app (no backend yet) */
-  var form = $('#contactForm'), status = $('#formStatus');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var d = new FormData(form), name = (d.get('name') || '').trim(), email = (d.get('email') || '').trim(), msg = (d.get('message') || '').trim();
-    var ok = name && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) && msg;
-    status.classList.toggle('err', !ok);
-    if (!ok) { status.textContent = 'Please fill in your name, a valid email and a short message.'; return; }
-    var body = msg + '\n\n' + name + '\n' + email;
-    window.location.href = 'mailto:ostyl51@gmail.com?subject=' + encodeURIComponent('Project enquiry from ' + name) + '&body=' + encodeURIComponent(body);
-    status.textContent = 'Opening your email app… if nothing opens, write to ostyl51@gmail.com.';
-  });
+  /* the project request form is handled in js/request.js (Firestore) */
 
   $('#year').textContent = new Date().getFullYear();
 })();

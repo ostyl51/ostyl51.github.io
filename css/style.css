@@ -221,10 +221,24 @@ h3 { font: 600 22px/1.25 var(--ff-head); }
 .contact-form input::placeholder, .contact-form textarea::placeholder { color: #6e6b92; }
 .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--violet); background: rgba(255, 255, 255, .08); }
 .contact-form .btn { justify-self: start; }
+.contact-form .btn[disabled] { opacity: .6; cursor: progress; transform: none; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.contact-form select {
+  font: 400 16px var(--ff-body); color: var(--text); padding: 13px 42px 13px 16px; border-radius: 14px;
+  background: rgba(255, 255, 255, .05) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a9a6c8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center / 18px;
+  border: 1px solid var(--line); appearance: none; -webkit-appearance: none; cursor: pointer; transition: border-color .2s, background-color .2s;
+}
+.contact-form select:focus { outline: none; border-color: var(--violet); background-color: rgba(255, 255, 255, .08); }
+.contact-form select option { background: var(--bg-2); color: var(--text); }
+.contact-form .invalid { border-color: #ff8aa0; }
+.hp { position: absolute !important; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .form-status { min-height: 1.4em; font-size: 14.5px; color: var(--muted); }
 .form-status.err { color: #ff8aa0; }
+.form-status.ok { color: #34e39a; }
 
-.footer { max-width: 1280px; margin: 0 auto; padding: 30px clamp(18px, 5vw, 64px) 50px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+.footer { max-width: 1280px; margin: 0 auto; padding: 30px clamp(18px, 5vw, 64px) 50px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px 24px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+.footer-social { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.footer a { transition: color .2s; }
 .footer a:hover { color: #fff; }
 
 /* ---------- reveal ---------- */
@@ -262,6 +276,7 @@ h3 { font: 600 22px/1.25 var(--ff-head); }
   .numbers { gap: 10px; }
   .num { padding: 16px; }
   .contact-form .btn { justify-self: stretch; justify-content: center; }
+  .form-row { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

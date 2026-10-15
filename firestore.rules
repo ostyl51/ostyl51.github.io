@@ -1,0 +1,34 @@
+rules_version = '2';
+
+// Paste these into Firebase console → Firestore Database → Rules, then click Publish.
+// Visitors can only CREATE a well-formed request. Nobody can read, change or delete
+// requests from the website; you read them in the Firebase console.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /requests/{requestId} {
+      allow create: if
+        request.resource.data.keys().hasOnly(['name', 'email', 'projectType', 'budget', 'timeline', 'message', 'status', 'createdAt'])
+        && request.resource.data.keys().hasAll(['name', 'email', 'projectType', 'budget', 'timeline', 'message', 'status', 'createdAt'])
+        && request.resource.data.name is string
+        && request.resource.data.name.size() > 0 && request.resource.data.name.size() <= 100
+        && request.resource.data.email is string
+        && request.resource.data.email.size() <= 200
+        && request.resource.data.email.matches('^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$')
+        && request.resource.data.projectType in ['mobile-app', 'website', 'web-app', 'ai-feature', 'other']
+        && request.resource.data.budget in ['not-sure', 'under-500', '500-1500', '1500-5000', '5000-plus']
+        && request.resource.data.timeline in ['flexible', '1-month', '1-3-months', '3-months-plus']
+        && request.resource.data.message is string
+        && request.resource.data.message.size() > 0 && request.resource.data.message.size() <= 3000
+        && request.resource.data.status == 'new'
+        && request.resource.data.createdAt == request.time;
+
+      allow read, update, delete: if false;
+    }
+
+    // Everything else is closed.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

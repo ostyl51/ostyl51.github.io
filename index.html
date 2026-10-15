@@ -229,20 +229,52 @@
     <div class="contact-copy">
       <p class="kicker">Contact</p>
       <h2>Have an idea? <span class="grad">Let's build it.</span></h2>
-      <p>Tell me a little about your project and I'll get back to you.</p>
+      <p>Send me a project request with the form and I'll get back to you by email. You can also hire me through Upwork or Fiverr.</p>
       <ul class="contact-links">
         <li><a href="mailto:ostyl51@gmail.com"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>ostyl51@gmail.com</a></li>
-        <li><a href="https://www.upwork.com/freelancers/~012e77b4ccc0023f5b" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 3v8a3 3 0 0 0 6 0V3M13 8c0 6 1 9 4 9a3 3 0 0 0 0-6c-2 0-3.500 1-4 3"/></svg>Hire me on Upwork</a></li>
-        <li><a href="https://www.fiverr.com/s/gvvrWRL" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg>Hire me on Fiverr</a></li>
-        <li><a href="https://www.linkedin.com/in/orestis-stylianidis-b73a7a3aa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v5M8 8h.01M12 16v-5M12 13c0-3 5-3 5 0v3"/></svg>LinkedIn</a></li>
+        <li><a href="https://www.upwork.com/freelancers/~012e77b4ccc0023f5b" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 3v8a3 3 0 0 0 6 0V3M13 8c0 6 1 9 4 9a3 3 0 0 0 0-6c-2 0-3.5 1-4 3"/></svg>Hire me on Upwork</a></li>
+        <li><a href="https://www.fiverr.com/s/3AAE6Am" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg>Hire me on Fiverr</a></li>
+        <li><a href="https://www.linkedin.com/in/orestis-stylianidis-b73a7a3aa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v5M8 8h.01M12 16v-5M12 13c0-3 5-3 5 0v3"/></svg>Connect on LinkedIn</a></li>
       </ul>
     </div>
     <form class="contact-form" id="contactForm" novalidate>
-      <label>Your name<input name="name" type="text" autocomplete="name" required placeholder="Jane Doe"></label>
-      <label>Your email<input name="email" type="email" autocomplete="email" required placeholder="jane@company.com"></label>
-      <label>What do you need?<textarea name="message" rows="4" required placeholder="A mobile app for my bookings, a website for my business…"></textarea></label>
-      <button class="btn" type="submit">Send message <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-      <p class="form-status" id="formStatus" role="status"></p>
+      <div class="form-row">
+        <label>Your name<input name="name" type="text" autocomplete="name" required maxlength="100" placeholder="Jane Doe"></label>
+        <label>Your email<input name="email" type="email" autocomplete="email" required maxlength="200" placeholder="jane@company.com"></label>
+      </div>
+      <div class="form-row">
+        <label>Project type
+          <select name="projectType" required>
+            <option value="" selected disabled>Choose one</option>
+            <option value="mobile-app">Mobile app</option>
+            <option value="website">Website</option>
+            <option value="web-app">Web app</option>
+            <option value="ai-feature">AI feature</option>
+            <option value="other">Something else</option>
+          </select>
+        </label>
+        <label>Budget
+          <select name="budget">
+            <option value="not-sure" selected>Not sure yet</option>
+            <option value="under-500">Under €500</option>
+            <option value="500-1500">€500 – €1,500</option>
+            <option value="1500-5000">€1,500 – €5,000</option>
+            <option value="5000-plus">€5,000+</option>
+          </select>
+        </label>
+      </div>
+      <label>Timeline
+        <select name="timeline">
+          <option value="flexible" selected>Flexible</option>
+          <option value="1-month">Within a month</option>
+          <option value="1-3-months">1 – 3 months</option>
+          <option value="3-months-plus">3+ months</option>
+        </select>
+      </label>
+      <label>Tell me about your project<textarea name="message" rows="5" required maxlength="3000" placeholder="What should it do, who is it for, and do you have designs or an existing site?"></textarea></label>
+      <label class="hp" aria-hidden="true">Leave this empty<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <button class="btn" type="submit" id="formSubmit">Send request <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>
@@ -250,9 +282,15 @@
 
 <footer class="footer">
   <p>© <span id="year">2026</span> Orestis Stylianides · Nicosia, Cyprus</p>
-  <a href="#top">Back to top ↑</a>
+  <nav class="footer-social" aria-label="Profiles">
+    <a href="https://www.upwork.com/freelancers/~012e77b4ccc0023f5b" target="_blank" rel="noopener">Upwork</a>
+    <a href="https://www.fiverr.com/s/3AAE6Am" target="_blank" rel="noopener">Fiverr</a>
+    <a href="https://www.linkedin.com/in/orestis-stylianidis-b73a7a3aa" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="#top">Back to top ↑</a>
+  </nav>
 </footer>
 
 <script src="js/main.js"></script>
+<script type="module" src="js/request.js"></script>
 </body>
 </html>
