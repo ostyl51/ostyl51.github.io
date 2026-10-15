@@ -2,7 +2,7 @@
 // Paste the values from Firebase console → Project settings → Your apps → Web app.
 // These values are not secret: access is controlled by the Firestore security rules (firestore.rules).
 // Until projectId is filled in, the form falls back to opening the visitor's email app.
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyAqQl5Q6osmFg_2CIKfuWV6aGUNBWAe6do",
   authDomain: "website-cde80.firebaseapp.com",
   projectId: "website-cde80",
