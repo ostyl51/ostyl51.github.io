@@ -1,323 +1,497 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Orestis Stylianides, app and web developer</title>
+<title>Orestis Stylianides · App and web developer in Cyprus</title>
 <meta name="description" content="Orestis Stylianides, a mobile and web developer in Nicosia, Cyprus. Apps and websites built from the first idea to launch: Flutter, Firebase, JavaScript, PHP and MySQL.">
-<meta name="theme-color" content="#0d1033">
-<meta property="og:title" content="Orestis Stylianides, app and web developer">
-<meta property="og:description" content="Mobile apps and websites built from the first idea to a working product.">
+<meta name="theme-color" content="#070920">
+<link rel="canonical" href="https://ostyl.dev/">
+<meta property="og:title" content="Orestis Stylianides · App and web developer">
+<meta property="og:description" content="Mobile apps and websites built from the first idea to a working product. Flutter, Firebase, JavaScript, PHP and MySQL.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://ostyl.dev/">
+<meta property="og:image" content="https://ostyl.dev/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ostyl.dev/assets/og.png">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script>document.documentElement.classList.add("js")</script>
-<link rel="stylesheet" href="css/style.css?v=4">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<script>
+(function () {
+  var d = document.documentElement; d.classList.add("js");
+  try { var t = localStorage.getItem("theme"); d.dataset.theme = (t === "light" || t === "dark") ? t : "dark"; } catch (e) { d.dataset.theme = "dark"; }
+})();
+</script>
+<link rel="stylesheet" href="css/style.css?v=5">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Orestis Stylianides",
+  "url": "https://ostyl.dev/",
+  "jobTitle": "Mobile and web developer",
+  "email": "mailto:ostyl51@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Nicosia", "addressCountry": "CY" },
+  "knowsAbout": ["Flutter", "Dart", "Firebase", "JavaScript", "PHP", "MySQL", "Web development", "Mobile app development"],
+  "sameAs": [
+    "https://www.linkedin.com/in/orestis-stylianidis-b73a7a3aa",
+    "https://www.upwork.com/freelancers/~012e77b4ccc0023f5b",
+    "https://github.com/ostyl51"
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
 
+<!-- ============ HEADER / NAVIGATION ============ -->
 <header class="top" id="top">
-  <a class="mark" href="#main" aria-label="Orestis Stylianides, home">
-    <img src="favicon.svg" alt="" width="34" height="34">
-    <span>Orestis Stylianides</span>
+  <a class="mark" href="#main" aria-label="Orestis Stylianides, back to the top">
+    <img src="favicon.svg" alt="" width="36" height="36">
+    <span class="mark-text"><b>Orestis Stylianides</b><small>App &amp; web developer</small></span>
   </a>
-  <nav class="menu" id="menu" aria-label="Main">
-    <a href="#work">Work</a>
-    <a href="#services">Services</a>
-    <a href="#process">Process</a>
-    <a href="#about">About</a>
-    <a class="btn btn-sm" href="#contact">Start a project</a>
+
+  <nav class="pill" id="menu" aria-label="Main">
+    <span class="pill-ind" aria-hidden="true"></span>
+    <a href="#work"><i>01</i>Work</a>
+    <a href="#services"><i>02</i>Services</a>
+    <a href="#process"><i>03</i>Process</a>
+    <a href="#about"><i>04</i>About</a>
+    <a href="#contact"><i>05</i>Contact</a>
+    <a class="btn btn-sun pill-cta" href="#contact">Start a project</a>
+    <p class="pill-foot"><span class="dot" aria-hidden="true"></span>Available for new projects</p>
   </nav>
-  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+
+  <div class="tools">
+    <button class="tool tool-search" id="openPalette" type="button" aria-haspopup="dialog" aria-label="Open quick search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+      <span class="tool-label">Jump to…</span><kbd id="kbdHint">Ctrl K</kbd>
+    </button>
+    <button class="tool tool-icon" id="themeBtn" type="button" aria-label="Switch to light theme">
+      <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.5 1.5M17.2 17.2l1.5 1.5M5.3 18.7l1.5-1.5M17.2 6.8l1.5-1.5"/></svg>
+    </button>
+    <a class="btn btn-sun btn-sm tools-cta magnetic" href="#contact">Start a project</a>
+    <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
 </header>
 
 <main id="main">
 
-<!-- HERO -->
-<section class="hero">
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero" aria-labelledby="hero-title">
+  <canvas class="grid-canvas" id="gridCanvas" aria-hidden="true"></canvas>
   <div class="hero-inner">
     <div class="hero-text">
-      <p class="status"><span class="dot" aria-hidden="true"></span>Available for new projects in Nicosia and remotely</p>
-      <h1 class="hero-title"><span>From first idea</span> <span>to a working app.</span></h1>
-      <p class="lead">I'm Orestis, a developer in Cyprus. I design and build mobile apps and websites for small businesses and founders, and I stay with the project until it's live and in people's hands.</p>
+      <p class="status"><span class="dot" aria-hidden="true"></span>Available for new projects<span class="status-sep" aria-hidden="true">·</span><span class="status-time">Nicosia <time id="clock">--:--</time></span></p>
+      <h1 class="hero-title" id="hero-title">
+        <span class="sr">I build mobile apps, websites and web apps that people actually use.</span>
+        <span class="ht" aria-hidden="true">
+          <span class="ht-line">I build</span>
+          <span class="roller" id="roller"><span class="is-in">mobile apps</span><span>websites</span><span>web apps</span><span>AI features</span></span>
+          <span class="ht-line">people use.</span>
+        </span>
+      </h1>
+      <p class="lead">I'm Orestis, a developer in Cyprus. I design and build apps and websites for small businesses and founders, and I stay with the project until it's live and in people's hands.</p>
       <div class="actions">
-        <a class="btn btn-sun" href="#contact">Start a project</a>
-        <a class="btn btn-ghost" href="#work">See my work</a>
+        <a class="btn btn-sun btn-lg magnetic" href="#contact">Start a project<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost btn-lg magnetic" href="#work">See my work</a>
       </div>
+      <p class="hint"><kbd>Ctrl K</kbd> opens quick search · move your mouse over the page</p>
     </div>
-    <div class="hero-visual" aria-hidden="true">
-      <div class="hv-browser">
-        <div class="browser-bar"><i></i><i></i><i></i><span>fkscars.pages.dev</span></div>
-        <img src="assets/fks/home.webp" alt="" width="1300" height="676">
+
+    <div class="scene" id="scene" aria-hidden="true">
+      <div class="scene-glow"></div>
+      <div class="scene-inner" id="sceneInner">
+        <div class="d-browser">
+          <div class="browser-bar"><i></i><i></i><i></i><span>fkscars.pages.dev</span></div>
+          <img src="assets/fks/home.webp" alt="" width="1300" height="676" fetchpriority="high">
+        </div>
+        <div class="d-phone"><img src="assets/bl/home.webp" alt="" width="600" height="1277"></div>
+        <p class="tag tag-a"><span class="dot"></span>Live car dealer site</p>
+        <p class="tag tag-b">Budget Lover · Android</p>
+        <p class="tag tag-c">&lt;/&gt; Flutter · Firebase · JS</p>
       </div>
-      <div class="hv-phone"><img src="assets/bl/home.webp" alt="" width="600" height="1277"></div>
-      <p class="hv-tag hv-tag-a"><span class="dot"></span>Live car dealer site</p>
-      <p class="hv-tag hv-tag-b">Budget Lover, Android</p>
     </div>
   </div>
-  <ul class="ticker" aria-label="Technologies I use">
-    <li>Flutter</li><li>Dart</li><li>Firebase</li><li>Firestore</li><li>JavaScript</li><li>PHP</li><li>MySQL</li><li>Cloudflare</li><li>AI</li>
+
+  <ul class="stats" aria-label="Highlights">
+    <li><b data-count="3">3</b><span>products built end to end</span></li>
+    <li><b data-count="15">15</b><span>languages in one app</span></li>
+    <li><b data-count="1">1</b><span>developer, idea to launch</span></li>
+    <li><b data-count="2">2</b><span>languages I work in, English and Greek</span></li>
   </ul>
 </section>
 
-<!-- WORK -->
-<section class="section work" id="work" aria-labelledby="work-title">
-  <div class="section-head">
-    <h2 id="work-title">Selected work</h2>
-    <p>Three products I designed and built myself, front end to database. Open one to see how it works.</p>
-  </div>
-
-  <div class="index-head" aria-hidden="true">
-    <span>Product</span><span>What it is</span><span>Built with</span><span>Status</span>
-  </div>
-
-  <ol class="index">
-    <!-- Budget Lover -->
-    <li class="item item-bl">
-      <h3>
-        <button class="row" aria-expanded="true" aria-controls="p-bl" id="r-bl">
-          <span class="row-name">Budget Lover</span>
-          <span class="row-what">AI budgeting app for Android</span>
-          <span class="row-stack">Flutter, Firebase, AI</span>
-          <span class="row-status">In development</span>
-          <span class="row-toggle" aria-hidden="true"></span>
-        </button>
-      </h3>
-      <div class="panel" id="p-bl" role="region" aria-labelledby="r-bl">
-        <div class="panel-text">
-          <p>An app that helps people spend less and save more. Every day it shows one number, how much is <b>safe to spend</b> until the next payday, and an AI advisor answers money questions using the person's own numbers.</p>
-          <ul class="facts">
-            <li>Safe-to-spend after bills, savings and a buffer</li>
-            <li>AI advisor with memory, "what if?" planning and receipt scanning</li>
-            <li>Trip budgets, subscriptions and a monthly wrap-up</li>
-            <li>Dark mode and 15 languages, including right-to-left Arabic</li>
-          </ul>
-          <p class="aside">Not yet released. Screens use demo data.</p>
-        </div>
-        <div class="gallery gallery-phone" data-gallery>
-          <div class="stage"><img src="assets/bl/safe.webp" alt="Budget Lover: safe to spend screen" width="600" height="1277"></div>
-          <div class="thumbs" role="group" aria-label="Budget Lover screens">
-            <button class="on" data-src="assets/bl/safe.webp" data-alt="Budget Lover: safe to spend screen">Safe to spend</button>
-            <button data-src="assets/bl/advisor.webp" data-alt="Budget Lover: AI advisor screen">AI advisor</button>
-            <button data-src="assets/bl/whatif.webp" data-alt="Budget Lover: what if planning screen">What if?</button>
-            <button data-src="assets/bl/savings.webp" data-alt="Budget Lover: savings plan screen">Savings plan</button>
-            <button data-src="assets/bl/trip.webp" data-alt="Budget Lover: trip budget screen">Trips</button>
-            <button data-src="assets/bl/receipt.webp" data-alt="Budget Lover: receipt scanning screen">Receipt scan</button>
-            <button data-src="assets/bl/wrapup.webp" data-alt="Budget Lover: monthly wrap-up screen">Wrap-up</button>
-            <button data-src="assets/bl/dark_home.webp" data-alt="Budget Lover: home screen in dark mode">Dark mode</button>
-            <button data-src="assets/bl/greek_home.webp" data-alt="Budget Lover: home screen in Greek">Greek</button>
-          </div>
-        </div>
-      </div>
-    </li>
-
-    <!-- FKS Stars Motors -->
-    <li class="item item-fks">
-      <h3>
-        <button class="row" aria-expanded="false" aria-controls="p-fks" id="r-fks">
-          <span class="row-name">FKS Stars Motors</span>
-          <span class="row-what">Website for a car dealer</span>
-          <span class="row-stack">JavaScript, Cloudflare Pages</span>
-          <span class="row-status is-live">Live</span>
-          <span class="row-toggle" aria-hidden="true"></span>
-        </button>
-      </h3>
-      <div class="panel" id="p-fks" role="region" aria-labelledby="r-fks" hidden>
-        <div class="panel-text">
-          <p>The website for FKS Stars Motors, a used and imported car dealer in Strovolos, Nicosia. Customers search the cars, compare them and book a test drive over WhatsApp or Viber. The owner adds cars and photos himself from a private admin page, with nothing to install.</p>
-          <ul class="facts">
-            <li>Search and filters by make, price, year and fuel</li>
-            <li>Car pages with photo galleries, favourites and comparison</li>
-            <li>Russian, English and Greek</li>
-            <li>Password-protected admin with photo upload, hosted free on Cloudflare</li>
-          </ul>
-          <a class="btn btn-line" href="https://fkscars.pages.dev" target="_blank" rel="noopener">Visit the live site</a>
-        </div>
-        <div class="gallery gallery-web" data-gallery>
-          <div class="browser">
-            <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>fkscars.pages.dev</span></div>
-            <div class="stage"><img src="assets/fks/home.webp" alt="FKS Stars Motors home page" width="1300" height="676" loading="lazy"></div>
-          </div>
-          <div class="thumbs" role="group" aria-label="FKS Stars Motors pages">
-            <button class="on" data-src="assets/fks/home.webp" data-alt="FKS Stars Motors home page">Home</button>
-            <button data-src="assets/fks/latest.webp" data-alt="FKS Stars Motors latest arrivals">Latest arrivals</button>
-            <button data-src="assets/fks/cars.webp" data-alt="FKS Stars Motors car search with filters">Search &amp; filters</button>
-            <button data-src="assets/fks/car.webp" data-alt="FKS Stars Motors car details page">Car page</button>
-            <button data-src="assets/fks/russian.webp" data-alt="FKS Stars Motors home page in Russian">Russian</button>
-          </div>
-        </div>
-      </div>
-    </li>
-
-    <!-- Epignwsi -->
-    <li class="item item-ep">
-      <h3>
-        <button class="row" aria-expanded="false" aria-controls="p-ep" id="r-ep">
-          <span class="row-name">Epignwsi</span>
-          <span class="row-what">Recovery support community</span>
-          <span class="row-stack">PHP, MySQL, Bootstrap</span>
-          <span class="row-status">Demo</span>
-          <span class="row-toggle" aria-hidden="true"></span>
-        </button>
-      </h3>
-      <div class="panel" id="p-ep" role="region" aria-labelledby="r-ep" hidden>
-        <div class="panel-text">
-          <p>A safe online community for people in recovery. Members share how they're doing, support each other and message privately, and an operator panel keeps the community in good shape.</p>
-          <ul class="facts">
-            <li>Posts, categories, comments and likes</li>
-            <li>Friends, private messages and notifications</li>
-            <li>Profiles, settings and an operator panel</li>
-            <li>Prepared statements, CSRF tokens, hashed passwords and permission checks</li>
-          </ul>
-          <p class="aside">English and Greek. Screens use demo data.</p>
-        </div>
-        <div class="gallery gallery-web" data-gallery>
-          <div class="browser">
-            <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>epignwsi.local</span></div>
-            <div class="stage"><img src="assets/ep/home.webp" alt="Epignwsi home feed" width="1100" height="792" loading="lazy"></div>
-          </div>
-          <div class="thumbs" role="group" aria-label="Epignwsi screens">
-            <button class="on" data-src="assets/ep/home.webp" data-alt="Epignwsi home feed">Home</button>
-            <button data-src="assets/ep/post.webp" data-alt="Epignwsi post with comments">Post &amp; comments</button>
-            <button data-src="assets/ep/messages.webp" data-alt="Epignwsi private messages">Messages</button>
-            <button data-src="assets/ep/profile.webp" data-alt="Epignwsi profile page">Profile</button>
-            <button data-src="assets/ep/operator.webp" data-alt="Epignwsi operator panel">Operator panel</button>
-            <button data-src="assets/ep/greek.webp" data-alt="Epignwsi home feed in Greek">Greek</button>
-          </div>
-        </div>
-      </div>
-    </li>
-  </ol>
-</section>
-
-<!-- SERVICES -->
-<section class="section services" id="services" aria-labelledby="services-title">
-  <div class="section-head">
-    <h2 id="services-title">What I can build for you</h2>
-    <p>One developer for the whole job, so nothing gets lost between design, code and data.</p>
-  </div>
-  <dl class="offer">
-    <div>
-      <dt><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18h2"/></svg>Mobile apps</dt>
-      <dd>Cross-platform apps in Flutter and Dart that feel fast and native, from a finance tracker to a booking system.</dd>
-    </div>
-    <div>
-      <dt><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg>Websites and web apps</dt>
-      <dd>Business websites, shops and database-driven web apps that work on every screen size and that you can update yourself.</dd>
-    </div>
-    <div>
-      <dt><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>Backend and sign-in</dt>
-      <dd>Firebase Authentication, Firestore or MySQL for secure accounts and data that stays in sync across devices.</dd>
-    </div>
-    <div>
-      <dt><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg>AI features</dt>
-      <dd>An assistant or smart feature that works with your own data, like the advisor and receipt scanner in Budget Lover.</dd>
-    </div>
-  </dl>
-</section>
-
-<!-- PROCESS -->
-<section class="section process" id="process" aria-labelledby="process-title">
-  <div class="section-head">
-    <h2 id="process-title">How a project runs</h2>
-    <p>Four steps, and you see progress at every one of them.</p>
-  </div>
-  <ol class="steps">
-    <li><span class="step-n">1</span><h3>Understand</h3><p>We talk through your idea, your customers and what success looks like.</p></li>
-    <li><span class="step-n">2</span><h3>Plan and design</h3><p>A clear scope and the screens, agreed with you before I write code.</p></li>
-    <li><span class="step-n">3</span><h3>Build</h3><p>I build in small steps and share a working version along the way.</p></li>
-    <li><span class="step-n">4</span><h3>Launch and hand over</h3><p>Testing, going live, and the source files and accounts handed to you.</p></li>
-  </ol>
-</section>
-
-<!-- ABOUT -->
-<section class="section about" id="about" aria-labelledby="about-title">
-  <figure class="about-photo">
-    <img src="assets/orestis.webp" alt="Portrait of Orestis Stylianides" width="760" height="950" loading="lazy">
-  </figure>
-  <div class="about-body">
-    <h2 id="about-title">About me</h2>
-    <p class="about-lead">I study Computer Science and build complete products on the side: an Android budgeting app, a live website for a car dealer and a community web app.</p>
-    <p>I care that what I build is secure, simple to use and easy to maintain after I hand it over. I explain things in plain language, I reply quickly, and I'm comfortable working in English and Greek.</p>
-    <ul class="skills" aria-label="Skills">
-      <li>Flutter</li><li>Dart</li><li>Firebase Authentication</li><li>Firestore</li><li>JavaScript</li><li>HTML and CSS</li><li>PHP</li><li>MySQL</li><li>Cloudflare Pages</li><li>Project management</li>
+<!-- ============ TECH MARQUEE ============ -->
+<div class="marquee" aria-label="Technologies I use">
+  <div class="marquee-track">
+    <ul>
+      <li>Flutter</li><li>Dart</li><li>Firebase</li><li>Firestore</li><li>JavaScript</li><li>HTML &amp; CSS</li><li>PHP</li><li>MySQL</li><li>Cloudflare</li><li>AI</li>
+    </ul>
+    <ul aria-hidden="true">
+      <li>Flutter</li><li>Dart</li><li>Firebase</li><li>Firestore</li><li>JavaScript</li><li>HTML &amp; CSS</li><li>PHP</li><li>MySQL</li><li>Cloudflare</li><li>AI</li>
     </ul>
   </div>
+</div>
+
+<!-- ============ WORK ============ -->
+<section class="section work" id="work" aria-labelledby="work-title">
+  <header class="section-head reveal">
+    <p class="eyebrow"><span>01</span>Selected work</p>
+    <h2 id="work-title">Three products,<br><em>built end to end.</em></h2>
+    <p class="section-sub">Each one designed and coded by me, front end to database. Click through the screens, or open the live site.</p>
+  </header>
+
+  <nav class="work-nav" id="workNav" aria-label="Projects">
+    <a href="#budget-lover"><i>01</i>Budget Lover</a>
+    <a href="#fks"><i>02</i>FKS Stars Motors</a>
+    <a href="#epignwsi"><i>03</i>Epignwsi</a>
+  </nav>
+
+  <!-- 01 Budget Lover -->
+  <article class="case case-bl reveal" id="budget-lover" aria-labelledby="bl-title">
+    <div class="case-media">
+      <div class="device-wrap" data-tilt>
+        <div class="glow"></div>
+        <div class="device-phone"><img class="shot" src="assets/bl/safe.webp" alt="Budget Lover: safe to spend screen" width="600" height="1277"></div>
+      </div>
+      <div class="gallery" data-gallery>
+        <div class="caption" aria-live="polite"><h4>Safe to spend</h4><p>The number that matters: how much you can spend today and every day until the next payday, after bills, savings and a buffer.</p></div>
+        <div class="thumbs" role="group" aria-label="Budget Lover screens">
+          <button type="button" class="on" data-src="assets/bl/safe.webp" data-alt="Budget Lover: safe to spend screen" data-title="Safe to spend" data-text="The number that matters: how much you can spend today and every day until the next payday, after bills, savings and a buffer.">Safe to spend</button>
+          <button type="button" data-src="assets/bl/advisor.webp" data-alt="Budget Lover: AI advisor screen" data-title="AI advisor" data-text="Ask &quot;Can I afford €80?&quot; and get a verdict based on your real numbers, with what the purchase changes.">AI advisor</button>
+          <button type="button" data-src="assets/bl/whatif.webp" data-alt="Budget Lover: what if planning screen" data-title="What if?" data-text="Test a decision before you make it. See the effect on safe to spend and balance; nothing is saved.">What if?</button>
+          <button type="button" data-src="assets/bl/savings.webp" data-alt="Budget Lover: savings plan screen" data-title="Savings plan" data-text="How much you can save each month at three levels (safe, balanced, stretch), with a health score.">Savings plan</button>
+          <button type="button" data-src="assets/bl/trip.webp" data-alt="Budget Lover: trip budget screen" data-title="Trip budgets" data-text="Plan a holiday, track it per day and per person, and save towards it. Live currency conversion included.">Trips</button>
+          <button type="button" data-src="assets/bl/receipt.webp" data-alt="Budget Lover: receipt scanning screen" data-title="Receipt scanning" data-text="Snap a receipt and AI fills in the expense for you. Or type an amount and pick a category.">Receipt scan</button>
+          <button type="button" data-src="assets/bl/wrapup.webp" data-alt="Budget Lover: monthly wrap-up screen" data-title="Monthly wrap-up" data-text="Your month in numbers, story-style, showing where the money went. Exportable as a PDF.">Wrap-up</button>
+          <button type="button" data-src="assets/bl/dark_home.webp" data-alt="Budget Lover: home screen in dark mode" data-title="Dark mode" data-text="A full dark theme that follows your phone, across every screen.">Dark mode</button>
+          <button type="button" data-src="assets/bl/greek_home.webp" data-alt="Budget Lover: home screen in Greek" data-title="15 languages" data-text="Fully translated, including right-to-left Arabic. Greek shown here.">Greek</button>
+        </div>
+        <button type="button" class="gal-ctl" aria-label="Pause automatic slideshow" aria-pressed="false"><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg></button>
+      </div>
+    </div>
+
+    <div class="case-body">
+      <span class="case-no" aria-hidden="true">01</span>
+      <p class="case-kind"><span class="badge">In development</span>Android app · personal project</p>
+      <h3 id="bl-title">Budget Lover</h3>
+      <p class="case-lead">An app that helps people spend less and save more. Every day it shows one number, how much is <b>safe to spend</b> until the next payday, and an AI advisor answers money questions using the person's own numbers.</p>
+      <ul class="facts">
+        <li>Safe-to-spend after bills, savings and a buffer</li>
+        <li>AI advisor with memory, "what if?" planning and receipt scanning</li>
+        <li>Trip budgets, subscriptions and a monthly wrap-up</li>
+        <li>Dark mode and 15 languages, including right-to-left Arabic</li>
+      </ul>
+      <dl class="spec">
+        <div><dt>Role</dt><dd>Design and development</dd></div>
+        <div><dt>Built with</dt><dd>Flutter, Dart, Firebase, AI</dd></div>
+        <div><dt>Note</dt><dd>Not yet released. Screens use demo data.</dd></div>
+      </dl>
+    </div>
+  </article>
+
+  <!-- 02 FKS Stars Motors -->
+  <article class="case case-fks reveal" id="fks" aria-labelledby="fks-title">
+    <div class="case-media">
+      <div class="device-wrap" data-tilt>
+        <div class="glow"></div>
+        <div class="browser">
+          <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>fkscars.pages.dev</span></div>
+          <div class="stage"><img class="shot" src="assets/fks/home.webp" alt="FKS Stars Motors home page" width="1300" height="676" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="gallery" data-gallery>
+        <div class="caption" aria-live="polite"><h4>Home page</h4><p>Search the stock, see the latest arrivals and contact the dealer straight away.</p></div>
+        <div class="thumbs" role="group" aria-label="FKS Stars Motors pages">
+          <button type="button" class="on" data-src="assets/fks/home.webp" data-alt="FKS Stars Motors home page" data-title="Home page" data-text="Search the stock, see the latest arrivals and contact the dealer straight away.">Home</button>
+          <button type="button" data-src="assets/fks/latest.webp" data-alt="FKS Stars Motors latest arrivals" data-title="Latest arrivals" data-text="The newest cars in stock, added by the owner from his own admin page.">Latest arrivals</button>
+          <button type="button" data-src="assets/fks/cars.webp" data-alt="FKS Stars Motors car search with filters" data-title="Search and filters" data-text="Filter the whole stock by make, price, year and fuel.">Search &amp; filters</button>
+          <button type="button" data-src="assets/fks/car.webp" data-alt="FKS Stars Motors car details page" data-title="Car page" data-text="Photo gallery, details, favourites and comparison, with a test drive request over WhatsApp or Viber.">Car page</button>
+          <button type="button" data-src="assets/fks/russian.webp" data-alt="FKS Stars Motors home page in Russian" data-title="Russian, English and Greek" data-text="The whole site switches between three languages for the dealer's customers.">Russian</button>
+        </div>
+        <button type="button" class="gal-ctl" aria-label="Pause automatic slideshow" aria-pressed="false"><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg></button>
+      </div>
+    </div>
+
+    <div class="case-body">
+      <span class="case-no" aria-hidden="true">02</span>
+      <p class="case-kind"><span class="badge is-live">Live</span>Website · real client</p>
+      <h3 id="fks-title">FKS Stars Motors</h3>
+      <p class="case-lead">The website for a used and imported car dealer in Strovolos, Nicosia. Customers search the cars, compare them and book a test drive over WhatsApp or Viber. The owner adds cars and photos himself from a private admin page, with nothing to install.</p>
+      <ul class="facts">
+        <li>Search and filters by make, price, year and fuel</li>
+        <li>Car pages with photo galleries, favourites and comparison</li>
+        <li>Russian, English and Greek</li>
+        <li>Password-protected admin with photo upload, hosted free on Cloudflare</li>
+      </ul>
+      <dl class="spec">
+        <div><dt>Role</dt><dd>Design, development and hosting</dd></div>
+        <div><dt>Built with</dt><dd>JavaScript, Cloudflare Pages</dd></div>
+      </dl>
+      <a class="btn btn-line magnetic" href="https://fkscars.pages.dev" target="_blank" rel="noopener">Visit the live site<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+    </div>
+  </article>
+
+  <!-- 03 Epignwsi -->
+  <article class="case case-ep reveal" id="epignwsi" aria-labelledby="ep-title">
+    <div class="case-media">
+      <div class="device-wrap" data-tilt>
+        <div class="glow"></div>
+        <div class="browser">
+          <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>epignwsi.local</span></div>
+          <div class="stage"><img class="shot" src="assets/ep/home.webp" alt="Epignwsi home feed" width="1100" height="792" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="gallery" data-gallery>
+        <div class="caption" aria-live="polite"><h4>Home feed</h4><p>Members see how the community is doing and can post, comment and like.</p></div>
+        <div class="thumbs" role="group" aria-label="Epignwsi screens">
+          <button type="button" class="on" data-src="assets/ep/home.webp" data-alt="Epignwsi home feed" data-title="Home feed" data-text="Members see how the community is doing and can post, comment and like.">Home</button>
+          <button type="button" data-src="assets/ep/post.webp" data-alt="Epignwsi post with comments" data-title="Post and comments" data-text="Share how you are doing and get support in the comments.">Post &amp; comments</button>
+          <button type="button" data-src="assets/ep/messages.webp" data-alt="Epignwsi private messages" data-title="Private messages" data-text="Friends can talk privately, with notifications for new messages.">Messages</button>
+          <button type="button" data-src="assets/ep/profile.webp" data-alt="Epignwsi profile page" data-title="Profile" data-text="Each member has a profile and their own settings.">Profile</button>
+          <button type="button" data-src="assets/ep/operator.webp" data-alt="Epignwsi operator panel" data-title="Operator panel" data-text="A panel that lets the operator keep the community in good shape.">Operator panel</button>
+          <button type="button" data-src="assets/ep/greek.webp" data-alt="Epignwsi home feed in Greek" data-title="English and Greek" data-text="The community works in both English and Greek.">Greek</button>
+        </div>
+        <button type="button" class="gal-ctl" aria-label="Pause automatic slideshow" aria-pressed="false"><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg></button>
+      </div>
+    </div>
+
+    <div class="case-body">
+      <span class="case-no" aria-hidden="true">03</span>
+      <p class="case-kind"><span class="badge">Demo</span>Web app · community</p>
+      <h3 id="ep-title">Epignwsi</h3>
+      <p class="case-lead">A safe online community for people in recovery. Members share how they're doing, support each other and message privately, and an operator panel keeps the community in good shape.</p>
+      <ul class="facts">
+        <li>Posts, categories, comments and likes</li>
+        <li>Friends, private messages and notifications</li>
+        <li>Profiles, settings and an operator panel</li>
+        <li>Prepared statements, CSRF tokens, hashed passwords and permission checks</li>
+      </ul>
+      <dl class="spec">
+        <div><dt>Role</dt><dd>Design and development</dd></div>
+        <div><dt>Built with</dt><dd>PHP, MySQL, Bootstrap</dd></div>
+        <div><dt>Note</dt><dd>English and Greek. Screens use demo data.</dd></div>
+      </dl>
+    </div>
+  </article>
 </section>
 
-<!-- CONTACT -->
+<!-- ============ SERVICES ============ -->
+<section class="band services" id="services" aria-labelledby="services-title">
+  <div class="band-inner">
+    <header class="section-head reveal">
+      <p class="eyebrow"><span>02</span>What I can build for you</p>
+      <h2 id="services-title">One developer<br>for the whole job.</h2>
+      <p class="section-sub">Design, code and data stay in one pair of hands, so nothing gets lost between them.</p>
+    </header>
+    <div class="svc-grid">
+      <article class="svc reveal" data-spot>
+        <span class="svc-no">01</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18h2"/></svg></div>
+        <h3>Mobile apps</h3>
+        <p>Cross-platform apps in Flutter and Dart that feel fast and native, from a finance tracker to a booking system.</p>
+        <ul class="svc-tags"><li>Flutter</li><li>Dart</li><li>Android</li></ul>
+      </article>
+      <article class="svc reveal" data-spot>
+        <span class="svc-no">02</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg></div>
+        <h3>Websites and web apps</h3>
+        <p>Business websites, shops and database-driven web apps that work on every screen size and that you can update yourself.</p>
+        <ul class="svc-tags"><li>HTML &amp; CSS</li><li>JavaScript</li><li>PHP</li></ul>
+      </article>
+      <article class="svc reveal" data-spot>
+        <span class="svc-no">03</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></div>
+        <h3>Backend and sign-in</h3>
+        <p>Firebase Authentication, Firestore or MySQL for secure accounts and data that stays in sync across devices.</p>
+        <ul class="svc-tags"><li>Firebase Auth</li><li>Firestore</li><li>MySQL</li></ul>
+      </article>
+      <article class="svc reveal" data-spot>
+        <span class="svc-no">04</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></div>
+        <h3>AI features</h3>
+        <p>An assistant or smart feature that works with your own data, like the advisor and receipt scanner in Budget Lover.</p>
+        <ul class="svc-tags"><li>AI advisor</li><li>Receipt scanning</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section process" id="process" aria-labelledby="process-title">
+  <header class="section-head reveal">
+    <p class="eyebrow"><span>03</span>How a project runs</p>
+    <h2 id="process-title">Four steps,<br><em>no surprises.</em></h2>
+    <p class="section-sub">You see progress at every one of them, and you always know what comes next.</p>
+  </header>
+  <ol class="timeline" id="timeline">
+    <li class="step reveal"><span class="step-dot" aria-hidden="true"></span><span class="step-n">01</span><h3>Understand</h3><p>We talk through your idea, your customers and what success looks like.</p></li>
+    <li class="step reveal"><span class="step-dot" aria-hidden="true"></span><span class="step-n">02</span><h3>Plan and design</h3><p>A clear scope and the screens, agreed with you before I write code.</p></li>
+    <li class="step reveal"><span class="step-dot" aria-hidden="true"></span><span class="step-n">03</span><h3>Build</h3><p>I build in small steps and share a working version along the way.</p></li>
+    <li class="step reveal"><span class="step-dot" aria-hidden="true"></span><span class="step-n">04</span><h3>Launch and hand over</h3><p>Testing, going live, and the source files and accounts handed to you.</p></li>
+  </ol>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section about" id="about" aria-labelledby="about-title">
+  <figure class="about-photo reveal" data-tilt>
+    <img src="assets/orestis.webp" alt="Portrait of Orestis Stylianides" width="760" height="950" loading="lazy">
+    <figcaption><span class="dot" aria-hidden="true"></span>Nicosia, <time id="clock2">--:--</time></figcaption>
+  </figure>
+  <div class="about-body reveal">
+    <p class="eyebrow"><span>04</span>About me</p>
+    <h2 id="about-title">Computer Science<br>student, <em>real products.</em></h2>
+    <p class="about-lead">I study Computer Science and build complete products on the side: an Android budgeting app, a live website for a car dealer and a community web app.</p>
+    <p>I care that what I build is secure, simple to use and easy to maintain after I hand it over. I explain things in plain language, I reply quickly, and I'm comfortable working in English and Greek.</p>
+    <div class="skill-groups">
+      <div><h3>Mobile</h3><ul><li>Flutter</li><li>Dart</li></ul></div>
+      <div><h3>Web</h3><ul><li>HTML and CSS</li><li>JavaScript</li><li>PHP</li></ul></div>
+      <div><h3>Data and hosting</h3><ul><li>Firebase Auth</li><li>Firestore</li><li>MySQL</li><li>Cloudflare Pages</li></ul></div>
+      <div><h3>Also</h3><ul><li>AI features</li><li>Project management</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
 <section class="contact" id="contact" aria-labelledby="contact-title">
   <div class="contact-inner">
-    <div class="contact-copy">
-      <h2 id="contact-title">Tell me about your project</h2>
-      <p>Send a request with the form and I'll reply by email. You can also hire me through Upwork or Fiverr.</p>
+    <header class="contact-head reveal">
+      <p class="eyebrow"><span>05</span>Contact</p>
+      <h2 id="contact-title">Tell me about<br><em>your project.</em></h2>
+      <p class="section-sub">Shape a quick brief on the left, or just write in the form. Either way I reply by email. You can also hire me through Upwork or Fiverr.</p>
       <ul class="contact-links">
-        <li><a href="mailto:ostyl51@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>ostyl51@gmail.com</a></li>
-        <li><a href="https://www.upwork.com/freelancers/~012e77b4ccc0023f5b" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v8a3 3 0 0 0 6 0V3M13 8c0 6 1 9 4 9a3 3 0 0 0 0-6c-2 0-3.5 1-4 3"/></svg>Hire me on Upwork</a></li>
-        <li><a href="https://www.fiverr.com/s/3AAE6Am" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg>Hire me on Fiverr</a></li>
-        <li><a href="https://www.linkedin.com/in/orestis-stylianidis-b73a7a3aa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v5M8 8h.01M12 16v-5M12 13c0-3 5-3 5 0v3"/></svg>Connect on LinkedIn</a></li>
+        <li><button type="button" class="copy-mail" id="copyMail" data-email="ostyl51@gmail.com" aria-label="Copy email address ostyl51@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>ostyl51@gmail.com</span><em>Copy</em></button></li>
+        <li><a href="https://www.upwork.com/freelancers/~012e77b4ccc0023f5b" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v8a3 3 0 0 0 6 0V3M13 8c0 6 1 9 4 9a3 3 0 0 0 0-6c-2 0-3.5 1-4 3"/></svg>Upwork</a></li>
+        <li><a href="https://www.fiverr.com/s/3AAE6Am" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg>Fiverr</a></li>
+        <li><a href="https://www.linkedin.com/in/orestis-stylianidis-b73a7a3aa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v5M8 8h.01M12 16v-5M12 13c0-3 5-3 5 0v3"/></svg>LinkedIn</a></li>
       </ul>
+    </header>
+
+    <div class="contact-grid">
+      <!-- Brief builder: fills in the form on the right -->
+      <div class="planner reveal" id="planner">
+        <div class="planner-top"><h3>Shape your brief</h3><span class="planner-count" id="plannerCount">0 / 3</span></div>
+        <fieldset class="q">
+          <legend><span>1</span>What are you building?</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="pType" value="mobile-app"><span>Mobile app</span></label>
+            <label class="opt"><input type="radio" name="pType" value="website"><span>Website</span></label>
+            <label class="opt"><input type="radio" name="pType" value="web-app"><span>Web app</span></label>
+            <label class="opt"><input type="radio" name="pType" value="ai-feature"><span>AI feature</span></label>
+            <label class="opt"><input type="radio" name="pType" value="other"><span>Something else</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="q">
+          <legend><span>2</span>What should it do? <small>Pick any</small></legend>
+          <div class="opts">
+            <label class="opt"><input type="checkbox" name="pFeat" value="sign-in and user accounts"><span>Sign-in and accounts</span></label>
+            <label class="opt"><input type="checkbox" name="pFeat" value="a cloud database that syncs across devices"><span>Cloud database</span></label>
+            <label class="opt"><input type="checkbox" name="pFeat" value="an admin page where I can update content myself"><span>Admin page</span></label>
+            <label class="opt"><input type="checkbox" name="pFeat" value="several languages"><span>Several languages</span></label>
+            <label class="opt"><input type="checkbox" name="pFeat" value="an AI assistant"><span>AI assistant</span></label>
+            <label class="opt"><input type="checkbox" name="pFeat" value="search and filters"><span>Search and filters</span></label>
+            <label class="opt"><input type="checkbox" name="pFeat" value="notifications"><span>Notifications</span></label>
+            <label class="opt"><input type="checkbox" name="pFeat" value="a dark mode"><span>Dark mode</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="q">
+          <legend><span>3</span>When do you need it?</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="pTime" value="flexible"><span>Flexible</span></label>
+            <label class="opt"><input type="radio" name="pTime" value="1-month"><span>Within a month</span></label>
+            <label class="opt"><input type="radio" name="pTime" value="1-3-months"><span>1 to 3 months</span></label>
+            <label class="opt"><input type="radio" name="pTime" value="3-months-plus"><span>3+ months</span></label>
+          </div>
+        </fieldset>
+        <div class="brief" aria-live="polite">
+          <p class="brief-label">Your brief, as it will be sent</p>
+          <p class="brief-text" id="briefText">Pick an option above and your brief appears here and in the form.</p>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-row">
+          <label>Your name<input name="name" type="text" autocomplete="name" required maxlength="100" placeholder="Jane Doe"></label>
+          <label>Your email<input name="email" type="email" autocomplete="email" required maxlength="200" placeholder="jane@company.com"></label>
+        </div>
+        <div class="form-row">
+          <label>Project type
+            <select name="projectType" required>
+              <option value="" selected disabled>Choose one</option>
+              <option value="mobile-app">Mobile app</option>
+              <option value="website">Website</option>
+              <option value="web-app">Web app</option>
+              <option value="ai-feature">AI feature</option>
+              <option value="other">Something else</option>
+            </select>
+          </label>
+          <label>Budget
+            <select name="budget">
+              <option value="not-sure" selected>Not sure yet</option>
+              <option value="under-500">Under €500</option>
+              <option value="500-1500">€500 – €1,500</option>
+              <option value="1500-5000">€1,500 – €5,000</option>
+              <option value="5000-plus">€5,000+</option>
+            </select>
+          </label>
+        </div>
+        <label>Timeline
+          <select name="timeline">
+            <option value="flexible" selected>Flexible</option>
+            <option value="1-month">Within a month</option>
+            <option value="1-3-months">1 – 3 months</option>
+            <option value="3-months-plus">3+ months</option>
+          </select>
+        </label>
+        <label>About your project<textarea name="message" rows="6" required maxlength="3000" placeholder="What should it do, who is it for, and do you have designs or an existing site?"></textarea></label>
+        <label class="hp" aria-hidden="true">Leave this empty<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+        <button class="btn btn-sun btn-lg" type="submit" id="formSubmit">Send request<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
     </div>
-    <form class="contact-form" id="contactForm" novalidate>
-      <div class="form-row">
-        <label>Your name<input name="name" type="text" autocomplete="name" required maxlength="100" placeholder="Jane Doe"></label>
-        <label>Your email<input name="email" type="email" autocomplete="email" required maxlength="200" placeholder="jane@company.com"></label>
-      </div>
-      <div class="form-row">
-        <label>Project type
-          <select name="projectType" required>
-            <option value="" selected disabled>Choose one</option>
-            <option value="mobile-app">Mobile app</option>
-            <option value="website">Website</option>
-            <option value="web-app">Web app</option>
-            <option value="ai-feature">AI feature</option>
-            <option value="other">Something else</option>
-          </select>
-        </label>
-        <label>Budget
-          <select name="budget">
-            <option value="not-sure" selected>Not sure yet</option>
-            <option value="under-500">Under €500</option>
-            <option value="500-1500">€500 – €1,500</option>
-            <option value="1500-5000">€1,500 – €5,000</option>
-            <option value="5000-plus">€5,000+</option>
-          </select>
-        </label>
-      </div>
-      <label>Timeline
-        <select name="timeline">
-          <option value="flexible" selected>Flexible</option>
-          <option value="1-month">Within a month</option>
-          <option value="1-3-months">1 – 3 months</option>
-          <option value="3-months-plus">3+ months</option>
-        </select>
-      </label>
-      <label>About your project<textarea name="message" rows="5" required maxlength="3000" placeholder="What should it do, who is it for, and do you have designs or an existing site?"></textarea></label>
-      <label class="hp" aria-hidden="true">Leave this empty<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
-      <button class="btn btn-invert" type="submit" id="formSubmit">Send request</button>
-      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-    </form>
   </div>
 </section>
 </main>
 
+<!-- ============ FOOTER ============ -->
 <footer class="foot">
-  <p>© <span id="year">2026</span> Orestis Stylianides, Nicosia, Cyprus</p>
-  <nav aria-label="Profiles">
-    <a href="https://www.upwork.com/freelancers/~012e77b4ccc0023f5b" target="_blank" rel="noopener">Upwork</a>
-    <a href="https://www.fiverr.com/s/3AAE6Am" target="_blank" rel="noopener">Fiverr</a>
-    <a href="https://www.linkedin.com/in/orestis-stylianidis-b73a7a3aa" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="#top">Back to top</a>
-  </nav>
+  <p class="foot-word" aria-hidden="true">ostyl.dev</p>
+  <div class="foot-row">
+    <p>© <span id="year">2026</span> Orestis Stylianides · Nicosia, Cyprus<br><small>Hand-built in plain HTML, CSS and JavaScript. No templates, no frameworks.</small></p>
+    <nav aria-label="Profiles">
+      <a href="https://www.upwork.com/freelancers/~012e77b4ccc0023f5b" target="_blank" rel="noopener">Upwork</a>
+      <a href="https://www.fiverr.com/s/3AAE6Am" target="_blank" rel="noopener">Fiverr</a>
+      <a href="https://www.linkedin.com/in/orestis-stylianidis-b73a7a3aa" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/ostyl51/ostyl51.github.io" target="_blank" rel="noopener">Source on GitHub</a>
+      <a href="#main">Back to top ↑</a>
+    </nav>
+  </div>
 </footer>
 
-<script src="js/main.js?v=4"></script>
-<script type="module" src="js/request.js?v=4"></script>
+<!-- ============ COMMAND PALETTE ============ -->
+<dialog class="palette" id="palette" aria-label="Quick search">
+  <div class="pal-search">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+    <input id="palInput" type="text" placeholder="Where do you want to go?" autocomplete="off" spellcheck="false" aria-label="Search sections, projects and links" role="combobox" aria-expanded="true" aria-controls="palList" aria-autocomplete="list">
+    <kbd>Esc</kbd>
+  </div>
+  <ul class="pal-list" id="palList" role="listbox" aria-label="Results"></ul>
+  <p class="pal-foot"><span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>Enter</kbd> open</span><span><kbd>Esc</kbd> close</span></p>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/main.js?v=5"></script>
+<script type="module" src="js/request.js?v=5"></script>
 </body>
 </html>
