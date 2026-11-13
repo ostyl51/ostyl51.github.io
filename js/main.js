@@ -430,7 +430,7 @@
       { g: 'Projects', t: 'Budget Lover', h: 'AI budgeting app', go: '#budget-lover', k: 'flutter android finance' },
       { g: 'Projects', t: 'FKS Stars Motors', h: 'Live car dealer website', go: '#fks', k: 'cars javascript cloudflare' },
       { g: 'Projects', t: 'Epignwsi', h: 'Community web app', go: '#epignwsi', k: 'php mysql recovery' },
-      { g: 'Open', t: 'FKS Stars Motors, live site', h: 'fkscars.pages.dev ↗', url: 'https://fkscars.pages.dev', k: 'website visit' },
+      { g: 'Open', t: 'FKS Stars Motors, live site', h: 'fksstarsmotors.com ↗', url: 'https://fksstarsmotors.com', k: 'website visit' },
       { g: 'Contact', t: 'Copy my email address', h: EMAIL, fn: copyEmail, k: 'gmail clipboard' },
       { g: 'Contact', t: 'Send an email', h: 'Opens your mail app', url: 'mailto:' + EMAIL, k: 'write message' },
       { g: 'Contact', t: 'Upwork profile', h: 'Hire me ↗', url: 'https://www.upwork.com/freelancers/~012e77b4ccc0023f5b', k: 'freelance' },
