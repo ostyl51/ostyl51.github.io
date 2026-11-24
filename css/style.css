@@ -126,7 +126,7 @@ kbd { font: 600 11.5px var(--mono); padding: 2px 7px; border-radius: 6px; backgr
 .mark img { border-radius: 10px; }
 .mark-text { display: grid; line-height: 1.15; white-space: nowrap; }
 .mark-text b { font: 600 14.5px var(--font-head); letter-spacing: -.01em; }
-.mark-text small { font: 500 12.5px var(--font); color: var(--muted); }
+.mark-text small { font: 500 12px/1.25 var(--font); color: var(--muted); white-space: normal; max-width: 200px; }
 
 .pill {
   position: relative; display: flex; align-items: center; gap: 2px; padding: 5px; border-radius: 999px;
