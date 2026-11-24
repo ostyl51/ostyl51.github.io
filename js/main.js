@@ -419,7 +419,6 @@
     var isMac = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
     var keyName = isMac ? '⌘ K' : 'Ctrl K';
     $('#kbdHint').textContent = keyName;
-    $$('.hint kbd').forEach(function (k) { k.textContent = keyName; });
 
     var items = [
       { g: 'Go to', t: 'Work', h: 'Section 01', go: '#work', k: 'projects portfolio case studies' },
