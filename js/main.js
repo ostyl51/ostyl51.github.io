@@ -416,9 +416,6 @@
   /* ---------- command palette (Ctrl / Cmd + K, or "/") ---------- */
   var pal = $('#palette'), palInput = $('#palInput'), palList = $('#palList'), openPal = $('#openPalette');
   if (pal && typeof pal.showModal === 'function') {
-    var isMac = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
-    var keyName = isMac ? '⌘ K' : 'Ctrl K';
-    $('#kbdHint').textContent = keyName;
 
     var items = [
       { g: 'Go to', t: 'Work', h: 'Section 01', go: '#work', k: 'projects portfolio case studies' },
