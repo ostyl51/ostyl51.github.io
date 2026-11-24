@@ -9,7 +9,7 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   var clamp = function (v, a, b) { return Math.max(a, Math.min(b, v)); };
-  var EMAIL = 'ostyl51@gmail.com';
+  var EMAIL = 'orestisdeveloper@yahoo.com';
 
   /* ---------- small toast ---------- */
   var toastEl = $('#toast'), toastTimer = 0;
@@ -427,10 +427,8 @@
       { g: 'Projects', t: 'FKS Stars Motors', h: 'Live car dealer website', go: '#fks', k: 'cars javascript cloudflare' },
       { g: 'Projects', t: 'Epignwsi', h: 'Community web app', go: '#epignwsi', k: 'php mysql recovery' },
       { g: 'Open', t: 'FKS Stars Motors, live site', h: 'fksstarsmotors.com ↗', url: 'https://fksstarsmotors.com', k: 'website visit' },
-      { g: 'Contact', t: 'Copy my email address', h: EMAIL, fn: copyEmail, k: 'gmail clipboard' },
+      { g: 'Contact', t: 'Copy my email address', h: EMAIL, fn: copyEmail, k: 'email clipboard' },
       { g: 'Contact', t: 'Send an email', h: 'Opens your mail app', url: 'mailto:' + EMAIL, k: 'write message' },
-      { g: 'Contact', t: 'Upwork profile', h: 'Hire me ↗', url: 'https://www.upwork.com/freelancers/~012e77b4ccc0023f5b', k: 'freelance' },
-      { g: 'Contact', t: 'Fiverr', h: 'Hire me ↗', url: 'https://www.fiverr.com/s/3AAE6Am', k: 'freelance gig' },
       { g: 'Contact', t: 'LinkedIn', h: 'Connect ↗', url: 'https://www.linkedin.com/in/orestis-stylianidis-b73a7a3aa', k: 'social' },
       { g: 'Site', t: 'Switch theme', h: 'Dark / light', fn: function () { toggleTheme(null); }, k: 'dark light mode appearance' },
       { g: 'Site', t: 'View the source code', h: 'GitHub ↗', url: 'https://github.com/ostyl51/ostyl51.github.io', k: 'repo github' }

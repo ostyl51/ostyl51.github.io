@@ -2,7 +2,7 @@
 import { firebaseConfig } from './firebase-config.js';
 
 const SDK = 'https://www.gstatic.com/firebasejs/10.12.2/';
-const EMAIL = 'ostyl51@gmail.com';
+const EMAIL = 'orestisdeveloper@yahoo.com';
 const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
 const form = document.getElementById('contactForm');
